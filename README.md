@@ -1,8 +1,8 @@
 # News Image — 24 November 2026
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Image: 1024×1024 PNG](https://img.shields.io/badge/Image-1024%C3%971024%20PNG-blue.svg)](entry.png)
-[![Bounty: news-image-20261124](https://img.shields.io/badge/Bounty-news--image--20261124-red.svg)](https://make.fun/c/news-image-20261124)
+[![make.fun](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/Cm11w/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/Cm11w/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124)
 
 One page that sums up the world's news of **Tuesday, November 24, 2026**:
 37 stories across 7 regions, led by Nvidia bringing Jensen Huang back
