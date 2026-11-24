@@ -1,34 +1,38 @@
-[![make.fun](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
-[![rank](https://make.fun/badge/news-image-20261124/Cm11w/news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124)
-[![reward](https://make.fun/badge/news-image-20261124/Cm11w/news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124)
+# News Image — 24 November 2026
 
-# Sum up 24 November's world news in one image
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Image: 1024×1024 PNG](https://img.shields.io/badge/Image-1024%C3%971024%20PNG-blue.svg)](entry.png)
+[![Bounty: news-image-20261124](https://img.shields.io/badge/Bounty-news--image--20261124-red.svg)](https://make.fun/c/news-image-20261124)
 
-One 1024x1024 newspaper front page for **Tuesday, November 24, 2026**:
-40 stories from 10 regions, led by Nvidia reinstating Jensen Huang
-(shares closed +31% — their best day since 2003 — Bitcoin +17% off
-its low to $64,505), with three drawn panels — a Bitcoin chart, a
-Russian corvette sunk by Ukrainian sea drones, and the Democrats'
-258+ House seats.
+One page that sums up the world's news of **Tuesday, November 24, 2026**:
+37 stories across 7 regions, led by Nvidia bringing Jensen Huang back
+as shares jump 31% — the Nasdaq's best day since April 2025.
 
-## How it is built
+- **Bounty:** [Sum up 24 November's world news in one image](https://make.fun/c/news-image-20261124) — $100 shared by the top 50 entries
+- **Deadline:** 26 November 2026, 00:00 UTC
 
-- `draw_entry.py` — draws `entry.png` with PIL (fixed fonts, fixed
-  layout, no clock or randomness, so re-runs are byte-identical).
-  Run it with `python3 draw_entry.py`.
-- `main.ts` — the entrypoint (Node 22, standard library only). It
-  copies `entry.png` into the grading output directory after
-  validating it: PNG magic, at most 1 MiB and 1024x1024, and every
-  chunk's CRC through to IEND.
-- `research-24nov.md` — the 40 stories and their sources, plus the
-  Tuesday-morning refresh (Monday's market close, NATO, peace talks).
+## How it works
 
-## Run
+`draw_entry.py` (Python 3, Pillow) draws `entry.png` — a 1024×1024
+newspaper front page: masthead, lead story, three picture panels
+(Bitcoin rebound, the corvette sunk off Libya, COP31 collapsing) and a
+33-story grid grouped by region. `main.ts` (Node 22, standard library
+only) copies `entry.png` to the output directory after checking it is a
+whole, valid PNG: correct magic bytes, at most 1 MiB, 1024×1024 pixels,
+and a correct CRC on every chunk up to IEND.
 
 ```sh
 python3 draw_entry.py
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
+
+Both commands are deterministic: every run writes the same bytes.
+
+## Sources
+
+`research-24nov.md` lists the 37 stories and where each was reported
+(Reuters, CNN, CoinDesk, Finnhub, BBC and others, all Monday 23 November
+closes or stories first reported Tuesday 24 November 2026).
 
 ## License
 
